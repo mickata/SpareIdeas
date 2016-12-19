@@ -42,6 +42,18 @@ main > section {
     display: none;
 }
 
+table th {
+    background-color: #7CB3E9;
+    font-size: 1.2em;
+    padding: 8px 10px;
+}
+
+table td {
+    background: #DDDDDD;
+    padding: 5px 10px;
+
+}
+
 footer {
     background: #DDD;
     padding: 5px 10px;
