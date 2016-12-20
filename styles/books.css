@@ -1,19 +1,104 @@
 header {
-    background: #DDD;
+    background: #1E90FF;
+
     padding: 5px 10px;
     border-radius: 3px;
     text-align: center;
+
 }
 
 header a {
     text-decoration: none;
     padding: 10px 10px;
     border-radius: 3px;
+    color: white;
 }
 
 header a:hover{
-    background: #AAA;
+    background: black;
 }
+
+img {
+    width: auto;
+    height: auto;
+}
+
+
+
+form {
+    background-size: cover;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    border-radius: 15px;
+    background-color: #1E90FF;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    width: 35%;
+    height: 55%;
+    font: 18px Oswald;
+    font-weight: 400;
+    color: white;
+    padding: 0 5px 5px;
+    margin-bottom: 15px;
+
+}
+
+/*Simple reset*/
+* {margin: 0; padding: 0;}
+
+body {
+    /*You can use any kind of background here.*/
+    background: grey;
+}
+canvas {
+    display: block;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+
+input {
+    border-radius: 30px;
+    border: 3px solid black;
+    width: 60%;
+    height: 35px;
+    margin: 0 auto 10px;
+    text-align: center;
+    font: 16px Lato;
+    font-weight: 100;
+    outline: black;
+
+}
+
+input:focus {
+    font: 12px Lato;
+    font-weight: 100;
+    outline: none;
+    border: 3px solid #06c0ab;
+}
+
+
+.content {
+    padding-top: 2.5%;
+    font: 16px Lato;
+    font-weight: 500;
+    width: 80%;
+    margin-left: 3%;
+    word-wrap: break-word;
+}
+
 
 #loadingBox,  #infoBox, #errorBox {
     display: none;
@@ -27,10 +112,12 @@ header a:hover{
 
 #loadingBox{
     background: #7CB3E9;
+    color: white;
 }
 
 #infoBox {
     background: #393;
+    color: white;
 }
 
 #errorBox{
@@ -42,23 +129,53 @@ main > section {
     display: none;
 }
 
+h2{
+    position: fixed; /* or absolute */
+    top: 60%;
+    left: 60%;
+    color: gold;
+    display: block;
+
+    bottom:  50%;
+
+}
+.im{
+    padding: 5px 10px;
+    outline: none;
+    opacity: 0.5;
+    position: fixed; /* or absolute */
+    top: 40%;
+    left: 40%;
+    border-radius: 100%;
+}
+
+
+
 table th {
-    background-color: #7CB3E9;
+
+    background-color: #1E90FF;
     font-size: 1.2em;
     padding: 8px 10px;
+    color: white;
+    border-radius: 10px;
+
 }
 
 table td {
-    background: #DDDDDD;
+    background: floralwhite;
     padding: 5px 10px;
-
+    outline: none;
+    border-radius: 10px;
 }
 
 footer {
-    background: #DDD;
+    background: #1E90FF;
     padding: 5px 10px;
+    position: absolute;
+    bottom: 0;
     border-radius: 3px;
     text-align: center;
-    font-size: 0.8em;
+    font-size: 1.0em;
     margin: 10px 5px;
+    color: white;
 }

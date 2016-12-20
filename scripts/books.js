@@ -39,7 +39,7 @@ function login() {
     let loginUrl = kinveyServiceBaseUrl + "user/" + kinveyAppID + "/login";
     let loginData = {
         username: $("#loginUser").val(),
-        password: $("#loginPass").val(),
+        password: $("#loginPass").val()
     };
     $.ajax({
         method: "POST",
@@ -100,6 +100,30 @@ function register() {
     }
     
 }
+
+function mailVer() {
+    let authBase64 = btoa(kinveyAppID + ":" + kinveyAppSecret);
+    let varMail = kinveyServiceBaseUrl + "username/" + kinveyAppID + "/user-email-verification-initiate";
+    let varM = {
+
+        mail: $("#inputEmail").val()
+    };
+    $.ajax({
+        method: "POST",
+        url: varMail,
+        data: varM,
+        headers: { "Authorization": "Basic " + authBase64},
+        success: varSuccess,
+        error: showAjaxError
+    });
+    function varSuccess(data, status) {
+        sessionStorage.authToken = data._kmd.authtoken;
+        showListBooksView();
+        showHideNavigationLinks();
+        showInfo("User registered successfully.");
+    }
+}
+
 
 function showListBooksView() {
     showView('viewListBooks');
@@ -172,6 +196,8 @@ function logout() {
     showHomeView();
     showHideNavigationLinks();
 }
+
+
 
 $(function () {
     $("#linkHome").click(showHomeView);
